@@ -22,11 +22,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.get('/', (req, res, next) => {
-    res.json({
-        user: 'Robert Pirritano'
-    });
-});
+
+const userRoutes = require('./routes/account');
+
+app.use('/api/accounts', userRoutes);
 
 app.listen(3031, err => {
     console.log('Magic happens on port awesome 3031');
