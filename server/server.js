@@ -28,7 +28,7 @@ const userRoutes = require('./routes/account');
 app.use('/api/accounts', userRoutes);
 
 app.listen(3031, err => {
-    console.log('Magic happens on port awesome 3031');
+    console.log('Magic happens on port awesome 3030');
   });
   
 
